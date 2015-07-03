@@ -1,0 +1,17 @@
+// a member variable and a member function of the same class hold the same name
+program example()
+	type a is class
+		var v is integer;
+		function v(x)
+			var x is integer;
+			return integer;
+		is
+			var t is integer;
+		begin
+			t := this;
+			return t;
+		end function v;
+	end class;
+is
+begin
+end

@@ -1,0 +1,25 @@
+// invoke a non-existent function in class.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 1;
+		return n;
+	end function a;
+	type b is class
+		var v is integer;
+		function f(x)
+			var x is integer;
+			return integer;
+		is
+		begin
+			return x;
+		end function f;
+	end class;
+is
+	var p is b;
+begin
+	print p.h(1);
+end

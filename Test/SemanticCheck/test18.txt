@@ -1,0 +1,23 @@
+// 2 different kind of functions have the same name.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 1;
+		return n;
+	end function a;
+	
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 2;
+		return n;
+	end function a;
+
+is
+begin
+end

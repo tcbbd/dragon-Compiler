@@ -1,0 +1,14 @@
+// a function has been used without being declared.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 1;
+		return n;
+	end function a;
+is
+begin
+	print b();
+end

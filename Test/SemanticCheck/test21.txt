@@ -1,0 +1,17 @@
+// check whether there is a circular deninition involving class inheritance.
+program example()
+	type a is class
+		var x is d;
+	end class;
+	type b is class extends a
+		var y is integer;
+	end class;
+	type c is class extends b
+		var z is integer;
+	end class;
+	type d is class
+		var w is c;
+	end class;
+is
+begin
+end

@@ -1,0 +1,18 @@
+// It's possible for function a(n) that it doesn't return anything.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		if n == 1 then 
+			return 1;
+		elif n < 10 then
+			n := n + 1;
+		else
+			return 2;
+		end if
+	end function a;
+is
+begin
+end

@@ -1,0 +1,15 @@
+// function return with a mistake type.
+program example()
+	type a is class
+	end class;
+	function a(n)
+		var n is integer;
+		return a;
+	is
+	begin
+		n := n + 1;
+		return n;
+	end function a;
+is
+begin
+end

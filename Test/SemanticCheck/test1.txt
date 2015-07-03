@@ -1,0 +1,12 @@
+// function return without return anything.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 1;
+	end function a;
+is
+begin
+end

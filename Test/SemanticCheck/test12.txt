@@ -1,0 +1,20 @@
+// return a mistake type in recursion.
+program example()
+	type a is class
+	end class;
+	function a(m, n)
+		var m is integer;
+		var n is integer;
+		return a;
+	is
+		var p is a;
+	begin
+		if m == 0 then
+			return p;
+		else
+			return a(m - 1, a(m, n - 1));
+		end if
+	end function a;
+is
+begin
+end

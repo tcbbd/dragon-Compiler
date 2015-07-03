@@ -1,0 +1,26 @@
+// pass 'this' as argument
+// (pointer is not implemented, so 'this' cannot be used as a value)
+program example()
+	type b is class
+		var v is integer;
+		function f(x)
+			var x is integer;
+			return integer;
+		is
+			var t is integer;
+		begin
+			g(this);
+			return t;
+		end function f;
+
+		function g(y)
+			var y is b;
+			return integer;
+		is
+		begin
+			return 1;
+		end function g;
+	end class;
+is
+begin
+end

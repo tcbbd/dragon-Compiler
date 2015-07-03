@@ -1,0 +1,30 @@
+// In a member function of the class, if one of its arguments or local
+// variables has the same name as its member variable, the member variable will
+// be shadowed and we can only access it by 'this'.
+program example()
+	type a is class
+		var v is integer;
+		var t is integer;
+		function f(v, w)
+			var v is integer;
+			var w is integer;
+			return integer;
+		is
+			var t is integer;
+		begin
+			t := v * w;
+			this.t := v + w;
+			return t - this.v;
+		end function f;
+	end class;
+	is
+		var p is integer;
+		var q is integer;
+		var r is a;
+	begin
+		p := 3;
+		q := 4;
+		r.v := 2;
+		r.t := 1;
+		print r.f(p, q), ", ", r.t, "\n";			//the answer should be 10, 7
+	end

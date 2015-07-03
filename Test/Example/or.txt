@@ -1,0 +1,34 @@
+// we want to show the feature of expr1 or expr2
+// case 1: expr1 is true, expr2 will not be computed
+program example()
+	type a is class
+		var v is integer;
+		function inc(x)
+			var x is integer;
+			return boolean;
+		is
+		begin
+			v := v + 1;
+			if x == 1 then 
+				return yes;
+			else
+				return no;
+			end if
+		end function inc;
+	end class;
+
+	function a()
+		return boolean;
+	is
+	begin
+		return yes;
+	end function a;
+is
+	var r is a;
+begin
+	r.v := 1;
+	print r.v, "\n";
+	if(a() or r.inc(1)) then
+		print r.v, "\n";			//the answer should be 1
+	end if
+end

@@ -1,0 +1,12 @@
+// one of the child class's member variable has the same name as its parent's
+// member varable.
+program example()
+	type a is class
+		var v is integer;
+	end class;
+	type b is class extends a
+		var v is integer;
+	end class;
+is
+begin
+end

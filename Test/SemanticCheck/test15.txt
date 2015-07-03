@@ -1,0 +1,10 @@
+// access the n-dimension array in a mistake way.
+program example()
+	type line is array of 10 integer;
+	type grid is array of 10 line;
+is
+	var g is grid;
+begin
+	g[1] := 1;
+	g[1][1][1] := 1;
+end

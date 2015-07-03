@@ -1,0 +1,44 @@
+// we want to show that the unreachable code would not be generated in llvm
+// assembly language
+program example()
+	function f(r)
+		var r is integer;
+		return integer;
+	is
+	begin
+		if yes then
+			print "I reach here.\n";
+			return 1;
+		end if 
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+		print "code should never reach here.\n";
+	end function f;
+	is
+		var s is integer;
+	begin
+		s := 1;
+		print f(s), "\n";
+	end

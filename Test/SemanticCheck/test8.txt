@@ -1,0 +1,15 @@
+// 2 different kind of variables have the same name.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 1;
+		return n;
+	end function a;
+is
+	var p is integer;
+	var p is boolean;
+begin
+end

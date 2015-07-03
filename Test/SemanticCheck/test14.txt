@@ -1,0 +1,8 @@
+// access the array out of its bound.
+program example()
+	type line is array of 10 integer;
+is
+	var l is line;
+begin
+	l[2222] := 1;
+end

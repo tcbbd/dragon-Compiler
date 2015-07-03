@@ -1,0 +1,91 @@
+program example()
+	function print_result(gEightQueen)
+		var gEightQueen is board;
+	is
+		var outer is integer;
+		var inner is integer;
+	begin
+		outer := 0;
+		while outer < 8 do
+			inner := 0;
+			while inner < 8 do
+				if inner == gEightQueen[outer] then
+					print " * ";
+				else
+					print " # ";
+				end if
+				inner := inner + 1;
+			end while
+			print "\n";
+			outer := outer + 1;
+		end while
+		print "========================\n";
+	end function print_result;
+
+	function check_pos_valid(loop, value, gEightQueen)
+		var loop is integer;
+		var value is integer;
+		var gEightQueen is board;
+		return integer;
+	is
+		var index is integer;
+		var data is integer;
+	begin
+		index := 0;
+		while index < loop do
+			data := gEightQueen[index];
+			if(value == data) then
+				return 0;
+			end if
+			if((index + data) == (loop + value)) then
+				return 0;
+			end if
+			if((index - data) == (loop - value)) then
+				return 0;
+			end if
+			index := index + 1;
+		end while
+		return 1;
+	end function check_pos_valid;
+
+	function eight_queen(index, gCount, gEightQueen)
+		var index is integer;
+		var gCount is integer;
+		var gEightQueen is board;
+		return integer;
+	is
+		var loop is integer;
+	begin
+		loop := 0;
+		while loop < 8 do
+			if(check_pos_valid(index, loop, gEightQueen) == 1) then
+				gEightQueen[index] := loop;
+				if(index == 7) then
+					gCount := gCount+1;
+					print_result(gEightQueen);
+					gEightQueen[index] := 0;
+					return gCount;
+				end if
+				gCount := eight_queen(index + 1, gCount, gEightQueen);
+				gEightQueen[index] := 0;
+			end if
+		loop := loop + 1;
+		end while
+		return gCount;
+
+	end function eight_queen;
+
+	type board is array of 8 integer;
+is
+	var gCount is integer;
+	var gEightQueen is board;
+	var i is integer;
+begin
+	gCount := 0;
+	i := 0;
+	foreach i in gEightQueen do
+		i := 0;
+	end foreach
+	gCount := eight_queen(0, gCount, gEightQueen);
+	print gCount, "\n";
+end

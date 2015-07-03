@@ -1,0 +1,20 @@
+// we want to show that the class type in function's argument list is passed by
+// value.
+program example()
+	type a is class
+		var v is integer;
+	end class;
+	function f(x)
+		var x is a;
+	is
+	begin
+		x.v := x.v + 1;
+	end function f;
+	is
+		var r is a;
+	begin
+		r.v := 1;
+		print r.v, "\n";
+		f(r);
+		print r.v, "\n";			//the answer should be 1.
+	end

@@ -1,0 +1,13 @@
+// this is the original correct script for our test.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		n := n + 1;
+		return n;
+	end function a;
+is
+begin
+end

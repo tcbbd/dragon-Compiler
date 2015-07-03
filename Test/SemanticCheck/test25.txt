@@ -1,0 +1,11 @@
+// use a variable of self-defined type illegally
+program example()
+	type a is class
+		var v is integer;
+	end class;
+is
+	var p is a;
+begin
+	p.v := 1;
+	p := p + 1;
+end

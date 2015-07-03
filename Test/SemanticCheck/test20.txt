@@ -1,0 +1,14 @@
+// check whether there is a circular definition.
+program example()
+	type a is class
+		var v is b;
+	end class;
+	type b is class
+		var v is c;
+	end class;
+	type c is class
+		var v is a;
+	end class;
+is
+begin
+end

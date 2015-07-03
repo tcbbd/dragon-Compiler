@@ -1,0 +1,26 @@
+// 2 different kind of class have the same name.
+program example()
+	type b is class
+		var v is integer;
+		function f(x)
+			var x is integer;
+			return integer;
+		is
+		begin
+			return x;
+		end function f;
+	end class;
+
+	type b is class
+		var v is boolean;
+		function f(x)
+			var x is integer;
+			return boolean;
+		is
+		begin
+			return yes;
+		end function f;
+	end class;
+is
+begin
+end

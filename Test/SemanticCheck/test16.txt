@@ -1,0 +1,16 @@
+// check whether there is a never-return control flow.
+program example()
+	function a(n)
+		var n is integer;
+		return integer;
+	is
+	begin
+		if no then 
+			return 1;
+		else
+			n := n + 1;
+		end if
+	end function a;
+is
+begin
+end

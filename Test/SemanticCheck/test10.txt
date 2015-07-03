@@ -1,0 +1,6 @@
+//check whether there is a non-defined type in array definition.
+program example()
+	type a is array of 10 b;
+is
+begin
+end

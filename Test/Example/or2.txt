@@ -1,0 +1,28 @@
+// we want to show the feature of expr1 or expr2
+// case 2: even if we can determine expr2 is true at compile time, we should
+// still execute the process of computing expr1
+program example()
+	type a is class
+		var v is integer;
+		function f(x)
+			var x is integer;
+			return boolean;
+		is
+		begin
+			v := v + 1;
+			if x == 1 then 
+				return yes;
+			else
+				return no;
+			end if
+		end function f;
+	end class;
+is
+	var r is a;
+begin
+	r.v := 1;
+	print r.v, "\n";
+	if(r.f(2) or yes) then  
+		print r.v, "\n";			//the answer should be 2
+	end if
+end

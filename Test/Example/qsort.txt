@@ -1,0 +1,49 @@
+program example()
+
+type line is array of 10 integer;
+
+function Qsort(arr, low, high)
+	var arr is line;
+	var low is integer;
+	var high is integer;
+is
+	var first is integer;
+	var last is integer;
+	var key is integer;
+begin
+	if low >= high then
+		return;
+	end if
+	first:=low;
+	last:= high;
+	key := arr[first];
+	while first < last do
+		while first < last and arr[last] >= key do
+			last := last - 1;
+		end while
+		arr[first] := arr[last];
+		while first < last and arr[first] <= key do
+			first:= first +1;
+		end while
+		arr[last] := arr[first];
+	end while
+	arr[first] := key;
+	Qsort(arr, low, first - 1);
+	Qsort(arr, first + 1, high);
+end function Qsort;
+
+is
+	var arr is line;
+	var i is integer;
+begin
+
+	arr[0] := 89; arr[1] := 72; arr[2] := 54; arr[3] := 99; arr[4] := 1;
+	arr[5] := 532; arr[6] := 1002; arr[7] := 25; arr[8] := 62; arr[9] := 10;
+
+	Qsort(arr, 0, 9);
+
+	foreach i in arr do
+		print i, "\n";
+	end foreach
+
+end

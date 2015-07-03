@@ -1,0 +1,18 @@
+// assign 'this' to a variable
+// (pointer is not implemented, so 'this' cannot be used as a value)
+program example()
+	type b is class
+		var v is integer;
+		function f(x)
+			var x is integer;
+			return integer;
+		is
+			var t is integer;
+		begin
+			t := this;
+			return t;
+		end function f;
+	end class;
+is
+begin
+end
